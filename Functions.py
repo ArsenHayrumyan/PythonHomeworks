@@ -278,6 +278,37 @@
 
 # ----------------------------------------------------------------------
 
+# '''98. Простое число?'''
+
+# def ord_num(n:int):
+#     mylist = []
+#     for i in range(2, n + 1):
+#         for j in range(2, i):
+#             if i % j == 0:
+#                 break
+#         else:
+#             mylist.append(i)
+#     return n in mylist
+
+# print(ord_num(int(input('Enter number to check: '))))
+
+# ----------------------------------------------------------------------
+
+# '''99. Следующее простое число'''
+
+# def ord_num(n:int):
+#     mylist = []
+#     for i in range(2, (n + 1) * 2):
+#         for j in range(2, i):
+#             if i % j == 0:
+#                 break
+#         else:
+#             if i > n:
+#                 mylist.append(i)
+#     return mylist[0]
+
+# print(ord_num(int(input('Enter number to check: '))))
+
 
 
 
