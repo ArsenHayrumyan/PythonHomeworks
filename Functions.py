@@ -432,6 +432,28 @@
 
 # ----------------------------------------------------------------------
 
+# '''108. Переводим меры'''
+
+# def weight(x:int, s:str) -> str:
+#     tea = None
+#     table = None
+#     cup = None
+
+#     if s == 'cup':
+#         return str(x) + ' ' + s
+#     elif s == 'tablespoon':
+#         cup = x // 16
+#         table = x % 16
+#         return str(int(cup)) + ' cup,' + ' ' + str(int(table)) + ' tablespoon'
+#     elif s == 'teaspoon':
+#         cup = (x / 3) // 16
+#         table = (x - (cup * 16 * 3)) // 3
+#         tea = (x - (cup * 16 * 3)) % 3
+#         return str(int(cup)) + ' cup,' + ' ' + str(int(table)) + ' tablespoon,' + ' ' + str(int(tea)) + ' teaspoon'
+# print(weight(int(input('Enter amount: ')), input('Enter measure unit: ')))
+
+# ----------------------------------------------------------------------
+
 # '''109. Магические даты'''
 
 # def magdate(d, m, y):
