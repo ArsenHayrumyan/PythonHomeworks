@@ -309,7 +309,191 @@
 
 # print(ord_num(int(input('Enter number to check: '))))
 
+# ----------------------------------------------------------------------
 
+# '''101. Случайный номерной знак'''
 
+# import random
 
+# def car_num():
+#     letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+#     num = ''
+#     let = ''
+#     for i in range(4):
+#         num += str(random.randint(0, 9))
+#     for i in range(3):
+#         let += random.choice(letters)
+#     return num + '-' + let
+# print(f'Your car number is {car_num()}. Congratulations!')
+
+# ----------------------------------------------------------------------
+
+# '''102. Проверка пароля на надежность'''
+
+# def your_pass(s):
+#     upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+#     symb = ['!', '@', '#', '$', '%', '&', '*']
+#     dig = 0
+#     symb_count = 0
+#     for i in s:
+#         if i.isdigit():
+#             dig +=1
+#         elif i in symb:
+#             symb_count += 1
+        
+#     return len(s) > 8 and s[0] in upper and dig >= 1 and symb_count >= 1
+
+# print(your_pass(input('Enter password: ')))
+
+# ----------------------------------------------------------------------
+
+# '''104. Шестнадцатеричные и десятичные числа'''
+
+# def hextoint(H):
+#     mydict = {
+#         10: 'A',
+#         11: 'B',
+#         12: 'C',
+#         13: 'D',
+#         14: 'E',
+#         15: 'F'
+#     }
+#     for i in mydict:
+#         if H == mydict[i]:
+#             return i
+#     if int(H) in range(0, 10):
+#         return H
+#     else:
+#         return 'ERROR'
+# HEX = input('Enter value in HEX: ')
+# print(f'The decimal eq.of your HEX value = {hextoint(HEX)}')
+
+# def inttohex(I):
+#     mydict = {
+#         10: 'A',
+#         11: 'B',
+#         12: 'C',
+#         13: 'D',
+#         14: 'E',
+#         15: 'F'
+#     }
+#     for i in mydict:
+#         if int(I) == i:
+#             return mydict[i]
+#     if int(I) in range(0, 10):
+#         return I
+#     else:
+#         return 'ERROR'
+# INT = input('Enter value in decimal: ')
+# print(f'The HEX eq.of your decimal value = {inttohex(INT)}')
+
+# ----------------------------------------------------------------------
+
+# '''106. Дни в месяце'''
+
+# def days(m, y):
+#     m31 = (1, 3, 5, 7, 8, 10 ,12)
+#     if m in m31:
+#         return 'This month has 31 days.'
+#     elif m <= 12 and m != 2:
+#         return 'This month has 30 days.'
+#     elif m == 2 and y % 4 == 0:
+#         return 'This month has 29 days.'
+#     elif m == 2 and y % 4 != 0:
+#         return 'This month has 28 days.'
+#     else:
+#         return 'You entered the wrong format.'
+
+# print (days(int(input('Enter month: ')), int(input('Enter year: '))))
+
+# ----------------------------------------------------------------------
     
+# '''107. Максимальное сокращение дробей'''
+
+# def func(x, y):
+#     list_x = []
+#     list_y = []
+#     max_del = None
+#     for i in range(1, x + 1):
+#         if x % i == 0:
+#             list_x.append(i)
+#     for i in range(1, y + 1):
+#         if y % i == 0:
+#             list_y.append(i)
+#     for i in list_x:
+#         for j in list_y:
+#             if i == j:
+#                 max_del = i
+#                 break
+#     return int(x / max_del), int(y / max_del)
+# num1 = int(input('Enter num1: '))
+# num2 = int(input('Enter num2: '))
+# print(func(num1, num2))
+
+# ----------------------------------------------------------------------
+
+# '''108. Переводим меры'''
+
+# def weight(x:int, s:str) -> str:
+#     tea = None
+#     table = None
+#     cup = None
+
+#     if s == 'cup':
+#         return str(x) + ' ' + s
+#     elif s == 'tablespoon':
+#         cup = x // 16
+#         table = x % 16
+#         return str(int(cup)) + ' cup,' + ' ' + str(int(table)) + ' tablespoon'
+#     elif s == 'teaspoon':
+#         cup = (x / 3) // 16
+#         table = (x - (cup * 16 * 3)) // 3
+#         tea = (x - (cup * 16 * 3)) % 3
+#         return str(int(cup)) + ' cup,' + ' ' + str(int(table)) + ' tablespoon,' + ' ' + str(int(tea)) + ' teaspoon'
+# print(weight(int(input('Enter amount: ')), input('Enter measure unit: ')))
+
+# ----------------------------------------------------------------------
+
+# '''109. Магические даты'''
+
+# def magdate(d, m, y):
+#     if d * m == y % 100:
+#         return 'Date is magic'
+#     else:
+#         return 'Date is ordinary'
+
+# # day = int(input('Enter day: '))
+# # month = int(input('Enter month: '))
+# # year = int(input('Enter year: '))
+
+# # print(magdate(day, month, year))
+
+# def days(m, y):
+#     m31 = (1, 3, 5, 7, 8, 10 ,12)
+#     if m in m31:
+#         return 31
+#     elif m <= 12 and m != 2:
+#         return 30
+#     elif m == 2 and y % 4 == 0:
+#         return 29
+#     elif m == 2 and y % 4 != 0:
+#         return 28
+#     else:
+#         return 'You entered the wrong format.'
+
+# def magdate(d, m, y):
+#     if d * m == y % 100:
+#         return f'{d} : {m} : {y}'
+#     else:
+#         pass
+        
+
+# for year in range(1900, 2000):
+#     for month in range(1, 13):
+#         for day in range(1, days(month, year) + 1):
+#             if magdate(day, month, year):
+#                 print(magdate(day, month, year))
+            
+# ----------------------------------------------------------------------
+
+
