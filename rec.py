@@ -42,3 +42,16 @@
 # print(f'Binary equivalent of your entered number is {dec_to_bin(dec_num)}')
 
 # ---------------------------------------------
+
+# '''178. Рекурсивные палиндромы'''
+
+# def pol(word):
+#     if len(word) <= 1:
+#         return True
+#     else:
+#         return word[0] == word[-1] and pol(word[1:-1])
+# your_word = input('Enter word to check: ')
+# if pol(your_word) == True:
+#     print('Your word IS polindrome')
+# else:
+#     print('Your word IS NOT polindrome')
