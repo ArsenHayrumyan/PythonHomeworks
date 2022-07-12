@@ -55,3 +55,16 @@
 #     print('Your word IS polindrome')
 # else:
 #     print('Your word IS NOT polindrome')
+
+# ---------------------------------------------
+
+# '''179. Рекурсивный квадратный корень'''
+
+# def sqr(n, g=1.0):
+#     if n - 10 ** (-12) <= g ** 2 <= n + 10 ** (-12):
+#         return g
+#     else:
+#         return sqr(n, ((g + n / g) / 2))
+
+# num = int(input('Enter number: '))
+# print(f'Square root of your input = {round(sqr(num), 5)}')
