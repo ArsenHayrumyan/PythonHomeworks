@@ -1,0 +1,10 @@
+1: Name - John Smith
+2: Age - 30
+3: Birth place - USA
+4: Maintown - Los Angeles
+5: Profession - Web developer
+6: Name - Jack Watson
+7: Age - 24
+8: Birth place - UK
+9: Maintown - Manchester
+10: Profession - Web developer
