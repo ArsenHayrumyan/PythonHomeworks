@@ -1,0 +1,36 @@
+
+def func(file:str, n:int, mylist:list=[]) -> str:
+    with open(file, 'rt') as x:
+        res = x.readlines()
+    for i in res[:n]:
+        i = i.replace('\n', '')
+        mylist.append(i)
+    for i in mylist:
+        print(i)
+
+
+
+
+def func(file:str, n:int, mylist:list=[]) -> str:
+    with open(file, 'rt') as x:
+        res = x.readlines()
+    for i in res[-n:]:
+        i = i.replace('\n', '')
+        mylist.append(i)
+    for i in mylist:
+        print(i)
+
+func('test.txt', 4)
+
+
+
+def con(file1, file2):
+    with open(file2, 'rt') as x:
+        res = x.readlines()
+    with open(file1, 'a') as y:
+        y.write('\n')
+        for i in res:
+            y.write(i)
+
+con('test1.txt', 'test2.txt')
+

@@ -125,6 +125,70 @@
 #     myword = input('Please, try again: ')
 # print(f'There are {word(myword)} \"{myword}\" in text.')
 
+# ----------------------------------------------
+
+# '''156. Сумма чисел'''
+
+# try:
+#     sum = 0
+#     num = input('Enter number: ')
+#     while num != '':
+#         sum += int(num)
+#         print(sum)
+#         num = input('Enter number: ')
+#     print(f'Sum = {sum}')
+# except ValueError:
+#     print('Enter number, not letter or symbol.')
+#     num = input('Enter number: ')
+#     while num != '':
+#         sum += int(num)
+#         print(sum)
+#         num = input('Enter number: ')
+#     print(f'Sum = {sum}')
+
+# ----------------------------------------------
+
+# '''158. Удаляем комментарии'''
+
+# with open('comments.txt', 'rt') as f:
+#     res = f.readlines()
+#     for i in res:
+#         if i[0] == '#':
+#             res.remove(i)
+# with open('comments.txt', 'w') as x:
+#     for i in res:
+#         x.write(i)
+
+# ----------------------------------------------
+
+# '''159. Случайный пароль из двух слов'''
+
+# import random
+# with open('words.txt', 'rt') as f:
+#     res = f.readline()
+#     word = ''
+#     mylist = []
+#     for i in res:
+#         i = i.replace('\n', '')
+#         for j in i:
+#                 word += j
+#                 mylist.append(word)
+#                 word = ''
+#     str = ''.join(mylist)
+#     newlist = str.split(' ')
+#     mypass = ''
+#     w1 = random.choice(newlist)
+#     w2 = random.choice(newlist)
+#     mypass = w1 + w2
+#     if not 8 <= len(mypass) <= 10:
+#         w1 = random.choice(newlist)
+#         w2 = random.choice(newlist)
+#         mypass = w1 + w2
+#     else:
+#         print(mypass)
+
+# ----------------------------------------------
+
 
 
             
